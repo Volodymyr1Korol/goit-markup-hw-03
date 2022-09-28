@@ -38,6 +38,10 @@ color: rgba(255, 255, 255, 0.6) */
     padding-bottom: 94px;
 }
 
+img {
+    display: block;
+}
+
 .grey-bc-color {
     background-color: var(--grey-bc-color);
 }
@@ -187,11 +191,20 @@ ul {
     background-color: var(--hero-color);
     padding-top: 200px;
     padding-bottom: 200px;
-    background: rgba(47, 48, 58, 0.4);
+}
+
+
+/* .hero-overlay {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: rgba(47, 48, 58, 0.4);
     background-image: url(../images/mainPageImg/header-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+    background-position: center;
+} */
 
 .hero-cont {
     justify-content: center;
@@ -264,9 +277,44 @@ ul {
 .feature .title {
     color: var(--prime-title-color);
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
+}
+
+.info-title::before {
+    display: block;
+    content: "";
+    height: 120px;
+    /* outline: 1px solid red; */
+    margin-bottom: 30px;
+    background-color: var(--grey-bc-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-satelite::before {
+    background-image: url(../images/mainPageImg/info-img1.svg);
+    background-size: 70px 70px;
+}
+
+.icon-clock::before {
+    background-image: url(../images/mainPageImg/info-img2.svg);
+    background-size: 70px 70px;
+}
+
+.icon-pc::before {
+    background-image: url(../images/mainPageImg/info-img3.svg);
+    background-size: 70px 70px;
+}
+
+.icon-man::before {
+    display: block;
+    background-image: url(../images/mainPageImg/info-img4.svg);
+    background-size: 70px 70px;
+    padding: 25px 100px;
 }
 
 .feature-text {
@@ -306,8 +354,8 @@ ul {
 }
 
 .team-wrap {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -367,16 +415,20 @@ footer-adress {
     font-style: normal;
 }
 
-.foot-mail a,
-.foot-phone a {
+.foot-adress.link {
+    color: #ffffff;
+    ;
+    line-height: 1.7;
+}
+
+.foot-mail.link,
+.foot-phone.link {
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.foot-adress {
-    color: #ffffff;
-    ;
-    line-height: 1.7;
+.foot-item:not(lastchild) {
+    margin-bottom: 9px;
 }
 
 .footer-adress a:hover,
