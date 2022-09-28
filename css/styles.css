@@ -90,6 +90,10 @@ ul {
 
 /* HEADER_____________STYLES */
 
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -112,6 +116,8 @@ ul {
     font-size: 26px;
     line-height: 1.2;
     color: var(--prime-black-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 
@@ -124,8 +130,6 @@ ul {
 .nav-wrap {
     display: flex;
     margin-left: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .nav-tabs {
@@ -142,6 +146,9 @@ ul {
 
 .nav-tabs .tab-link {
     text-decoration: none;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-tabs .link.current {
@@ -176,6 +183,9 @@ ul {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px
 }
 
 .nav-contacts a:hover,
@@ -207,7 +217,6 @@ ul {
 } */
 
 .hero-cont {
-    justify-content: center;
     text-align: center;
 }
 
@@ -274,47 +283,13 @@ ul {
     gap: 30px;
 }
 
-.feature .title {
+.info-title {
     color: var(--prime-title-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
-}
-
-.info-title::before {
-    display: block;
-    content: "";
-    height: 120px;
-    /* outline: 1px solid red; */
-    margin-bottom: 30px;
-    background-color: var(--grey-bc-color);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.icon-satelite::before {
-    background-image: url(../images/mainPageImg/info-img1.svg);
-    background-size: 70px 70px;
-}
-
-.icon-clock::before {
-    background-image: url(../images/mainPageImg/info-img2.svg);
-    background-size: 70px 70px;
-}
-
-.icon-pc::before {
-    background-image: url(../images/mainPageImg/info-img3.svg);
-    background-size: 70px 70px;
-}
-
-.icon-man::before {
-    display: block;
-    background-image: url(../images/mainPageImg/info-img4.svg);
-    background-size: 70px 70px;
-    padding: 25px 100px;
 }
 
 .feature-text {
@@ -343,7 +318,6 @@ ul {
 
 .team-title {
     display: flex;
-    justify-content: center;
     gap: 30px;
 }
 
@@ -427,7 +401,7 @@ footer-adress {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.foot-item:not(lastchild) {
+.foot-item:not(:lastchild) {
     margin-bottom: 9px;
 }
 
@@ -446,8 +420,11 @@ footer-adress {
 .examples-list {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 60px) / 3);
     gap: 30px;
+}
+
+.examples-item {
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .content-list {
@@ -494,6 +471,7 @@ footer-adress {
 }
 
 .item-border .item-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
